@@ -11,7 +11,7 @@ function CourseCard({ course }: Props) {
   return (
     <Link href={`${course.slug}`} key={course.slug}>
       <Card className="p-0 rounded-lg gap-2">
-        <div className="relative h-52 w-full bg-sidebar rounded-lg">
+        <div className="relative h-52 w-full bg-sidebar rounded-lg object-cover">
           <Image
             src={course.thumbnail}
             alt={course.title}
