@@ -19,7 +19,7 @@ function AppNavbar() {
               <Contact />
             </Link>
           </Button>
-          <Button asChild size={"sm"}>
+          <Button asChild size="sm" className="cursor-pointer dark:text-white">
             <Link href="/sign-in">
               <span>Sign in</span>
               <LogIn />
