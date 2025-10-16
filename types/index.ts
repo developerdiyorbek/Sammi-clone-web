@@ -9,3 +9,9 @@ export interface ISourceCode {
   title: string;
   repository_url: string;
 }
+
+export interface UserType {
+  email: string;
+  firstName: string;
+  lastName: string;
+}

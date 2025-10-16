@@ -1,31 +1,29 @@
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 import SocialButton from "../_components/SocialButton";
 import SignUpForm from "./_components/SignUpForm";
-import Link from "next/link";
+import Title from "./_components/Title";
 
-function Page() {
+const SignUpPage = () => {
   return (
-    <div className=" bg-card rounded-lg shadow-lg">
+    <div className="h-fit bg-card shadow-lg w-md rounded-lg">
       <div className="p-6">
-        <h1 className="text-xl font-semibold">Create your account</h1>
-        <p className="text-sm text-muted-foreground">
-          Welcome! Please fill in the details to get started
-        </p>
+        <Title />
         <SocialButton />
         <Separator className="my-6" />
         <SignUpForm />
       </div>
-      <div className="bg-secondary py-6 rounded-lg text-center">
-        Already have an account?{" "}
+      <div className="bg-secondary py-6 rounded-lg text-center text-sm text-muted-foreground mt-4">
+        <span className="dark:text-white">Already have an account?</span>{" "}
         <Link
-          href={"/sign-in"}
+          href="/sign-in"
           className="text-primary hover:underline font-medium"
         >
-          Sign in
+          Sign In
         </Link>
       </div>
     </div>
   );
-}
+};
 
-export default Page;
+export default SignUpPage;
