@@ -11,9 +11,9 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-async function CourseDetailPage({ params }: Props) {
+async function ProjectDetailPage({ params }: Props) {
   const { slug } = await params;
-  const course = await getCourseBySlug(slug);
+  console.log("Slug:", slug);
 
   return (
     <>
@@ -26,7 +26,7 @@ async function CourseDetailPage({ params }: Props) {
           <CourseDetailForWhom />
           <Review />
         </div>
-        <div className="hidden lg:flex lg:w-1/3">
+        <div className="hidden lg:flex lg:w-1/3 sticky top-24">
           <Enroll />
         </div>
       </div>
@@ -36,4 +36,4 @@ async function CourseDetailPage({ params }: Props) {
   );
 }
 
-export default CourseDetailPage;
+export default ProjectDetailPage;
