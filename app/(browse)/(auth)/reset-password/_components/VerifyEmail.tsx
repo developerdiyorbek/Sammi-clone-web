@@ -64,7 +64,7 @@ const VerifyEmail = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full group">
+          <Button type="submit" className="w-full group dark:text-white">
             <span>Confirm</span>
             <IoMdArrowDropright className="size-4 transition-transform group-hover:translate-x-1" />
           </Button>
